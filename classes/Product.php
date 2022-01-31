@@ -36,8 +36,12 @@ class Product {
         return $this->ShipmentDay;
     }
 
-    function getShipmentPrice() {
-        return number_format($this->price * 10 / 100, 2);
+    function getShipmentPrice($_userType) {
+        if ($_userType = "premium") {
+            return 0;
+        } else {
+            return number_format($this->price * 10 / 100, 2);
+        }
     }
 
 

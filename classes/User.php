@@ -6,6 +6,7 @@ class User {
     protected $email;
     protected $address;
     protected $creditCards;
+    protected $userType = "standard";
 
     function __construct($_name, $_surname, $_email, $_address, $_creditCards) {
         $this->name = $_name;
@@ -33,6 +34,14 @@ class User {
 
     function getCreditCards() {
         return $this->creditCards;
+    }
+
+    function getUserType() {
+        return $this->userType;
+    }
+
+    function getDiscount() {
+        return 0;
     }
 }
 
