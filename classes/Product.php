@@ -1,19 +1,25 @@
 <?php
 
+require_once __DIR__ . "/../traits/Vendor.php";
 class Product {
+
+    use Vendor;
+
     protected $name;
     protected $desc;
     protected $price;
-    protected $vendor;
     protected $shipmentDay;
     protected $shipmentPrice;
 
-    function __construct($_name, $_desc, $_price, $_vendor, $_shipmentDay, $_shipmentPrice) {
+    function __construct($_name, $_desc, $_price, $_shipmentDay, $_vendorName, $_vendorAddress, $_vendorEmail, $_vendorVote) {
         $this->name = $_name;
         $this->desc = $_desc;
         $this->price = $_price;
-        $this->vendor = $_vendor;
         $this->shipmentDay = $_shipmentDay;
+        $this->vendorName = $_vendorName;
+        $this->vendorAddress = $_vendorAddress;
+        $this->vendorEmail = $_vendorEmail;
+        $this->vendorVote = $_vendorVote;
     }
 
     function getName() {
@@ -26,10 +32,6 @@ class Product {
 
     function getPrice() {
         return $this->price;
-    }
-
-    function getVendor() {
-        return $this->vendor;
     }
     
     function getShipmentDay() {

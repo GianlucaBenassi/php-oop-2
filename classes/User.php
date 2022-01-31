@@ -1,6 +1,11 @@
 <?php
 
+include_once __DIR__ . "/../traits/CreditCard.php";
+
 class User {
+
+    use CreditCard;
+
     protected $name;
     protected $surname;
     protected $email;
