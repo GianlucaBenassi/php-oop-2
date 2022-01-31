@@ -35,7 +35,7 @@ class Product {
     }
     
     function getShipmentDay() {
-        return $this->ShipmentDay;
+        return $this->shipmentDay;
     }
 
     function getShipmentPrice($_userType) {

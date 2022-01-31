@@ -7,19 +7,19 @@ trait Vendor {
     protected $vendorVote;
 
     function getVendorName() {
-        return $this->name;
+        return $this->vendorName;
     }
 
     function getVendorAddress() {
-        return $this->address;
+        return $this->vendorAddress;
     }
 
     function getVendorEmail() {
-        return $this->email;
+        return $this->vendorEmail;
     }
 
     function getVendorVote() {
-        return $this->vote;
+        return $this->vendorVote;
     }
 }
 

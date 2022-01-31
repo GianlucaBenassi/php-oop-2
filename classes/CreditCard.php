@@ -27,6 +27,10 @@ class CreditCard {
         }
     }
 
+    function getExpiry() {
+        return $this->expiry;
+    }
+
     function getCvv() {
         return $this->cvv;
     }
