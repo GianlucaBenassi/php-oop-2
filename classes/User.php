@@ -1,24 +1,19 @@
 <?php
 
-include_once __DIR__ . "/../traits/CreditCard.php";
-
 class User {
-
-    use CreditCard;
 
     protected $name;
     protected $surname;
     protected $email;
     protected $address;
-    protected $creditCards;
     protected $userType = "standard";
+    protected $creditCards = [];
 
-    function __construct($_name, $_surname, $_email, $_address, $_creditCards) {
+    function __construct($_name, $_surname, $_email, $_address) {
         $this->name = $_name;
         $this->surname = $_surname;
         $this->email = $_email;
         $this->address = $_address;
-        $this->creditCards = $_creditCards;
     }
 
     function getName() {
@@ -37,10 +32,6 @@ class User {
         return $this->address;
     }
 
-    function getCreditCards() {
-        return $this->creditCards;
-    }
-
     function getUserType() {
         return $this->userType;
     }
@@ -48,6 +39,15 @@ class User {
     function getDiscount() {
         return 0;
     }
+
+    function addCreditCard($_card) {
+        $this->creditCards[] = $_card;
+    }
+
+    function getCreditCards() {
+        return $this->creditCards;
+    }
+
 }
 
 ?>
