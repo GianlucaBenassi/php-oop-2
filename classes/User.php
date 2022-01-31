@@ -14,6 +14,26 @@ class User {
         $this->address = $_address;
         $this->creditCards = $_creditCards;
     }
+
+    function getName() {
+        return $this->name;
+    }
+
+    function getSurname() {
+        return $this->surname;
+    }
+
+    function getEmail() {
+        return $this->email;
+    }
+
+    function getAddress() {
+        return $this->address;
+    }
+
+    function getCreditCards() {
+        return $this->creditCards;
+    }
 }
 
 ?>
